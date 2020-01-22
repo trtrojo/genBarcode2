@@ -101,9 +101,11 @@ PDFObject.embed(doc.output('datauristring'), "#preview-pane");
 
 function createLabel() { 
         /////////////////////////////////////////////////////////////
+        if (document.genLabel.barcode.value != "") {
         var canvas = document.createElement("canvas");
         //var text = "52114013378"
-        var text = "1128756"
+        //var text = "1128756"
+        var text = document.genLabel.barcode.value;
         //var text = "112204"
         //height:25, width:5
         //height:25, width:1.5
@@ -114,6 +116,7 @@ function createLabel() {
         //window.open(x)
         
         var imgData = x;
+        }
 
 //var doc = new jsPDF('p', 'in', [5,2]);
 var doc = new jsPDF({
@@ -137,13 +140,19 @@ doc.setFontSize(10);
 //doc.text("line 1", 2,4);
 doc.setFont("helvetica");
 doc.setFontSize(9);
-doc.text("FREE RANGE EGGS", 1, 4)
-doc.text("KINDERHOOK FARM", 1, 8)
-doc.text("SELL BY: 1/20/19", 1, 12)
+//doc.text("FREE RANGE EGGS", 1, 4)
+//doc.text("KINDERHOOK FARM", 1, 8)
+//doc.text("SELL BY: 1/20/19", 1, 12)
+doc.text(document.genLabel.line1.value, 1, 4)
+doc.text(document.genLabel.line2.value, 1, 8)
+doc.text(document.genLabel.line3.value, 1, 12)
+
 //doc.text(z, 1, 12)
 //doc.addImage(imgData, 0.5,10, 36.5, 16); //jsbarcode margin 10 (default)
 //console.log(imgData);
+if (imgData) {
 doc.addImage(imgData, "JPEG", 3.5,14, 30, 9)
+}
 //doc.addImage(imgData, "JPEG", 3.5,14)
 //doc.output('datauri');
 PDFObject.embed(doc.output('datauristring'), "#preview-pane");
