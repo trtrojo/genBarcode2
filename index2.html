@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>genBarcode2</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- Bootstrap -->
+		<link href="./css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Editor CSS -->
+        <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./js/pdfobject.min.js"></script>
+        <script type="text/javascript" src="./js/JsBarcode.all.min.js"></script>
+        <script type="text/javascript" src="./js/jspdf.min.js"></script>
+		
+
+        
+	</head>
+
+	<body>
+		<div class="container">
+
+			<div class="masthead">
+			</div>
+				<h1 class="muted">Zebra barcode generator</h1>
+			</div>
+
+			<div class="row-fluid">
+                <div class="span6" style="float: right; height: 650px;width: 50%;" >
+                    
+                    <!--HEEEEEEEEEEEEEEEEEEERE-->
+                    <div id="preview-pane" style="height: 650px;position:relative; z-index:999">
+                        <!--<iframe id="preview-pane2" src="" type="application/pdf" width="100%" height="100%" style="overflow: auto;"></iframe>-->
+                    </div>
+                    
+				</div>
+				<div class="span5 no-gutter" style="width: 49%;float:left">
+
+                    <form name="genLabel" class="form-signin">
+                        <h3 class="form-signin-heading">Create Label</h3>
+                        <label>First Line</label>
+                        <input name="line1" type="text" class="form-control" placeholder="Name (Eg: Arcadian Dozen Eggs)" autofocus value="" />
+                        <label>Line 2</label>
+                        <input name="line2" type="text" class="form-control" placeholder="Second Line" value="" />
+                        <label>Line 3</label>
+                        <input name="line3" type="text" class="form-control" placeholder="Third Line (eg: SELL BY: 1/1/99)" />
+                        <label>Barcode</label>
+                        <input name="barcode" type="text" class="form-control" placeholder="Catapult Item ID (eg: 52114)" />
+                      
+                        <!--<button onClick="#" class="btn btn-lg btn-primary btn-block" type="submit">Create Label</button>-->
+                        <button class="btn btn-lg btn-primary btn-block" type="button" id="createlabel">Create Label</button>
+                      
+
+                </div>
+
+			</div>
+			<div class="clerfix">You should probably keep this for internal use :)</div>
+
+		</div> <!-- /container -->
+
+		<footer>Questions? Email tommy.rojo@eataly.com</footer>
+
+        <script type="text/javascript">
+
+function instructionPage() {
+    var doc = new jsPDF({format: "letter"});
+    e = "data:image/png;base64,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"
+
+    doc.text(
+`Bacode Generator - Guide for use 
+
+1: The three lines you are free to type anything on the label.
+
+2: To keep consistancy, you should use the catapult item name to
+to make it easier for cashiers to find the item should they need to.
+
+3: The barcode field should be the catapult Item ID
+
+EG: 
+Line 1: FREE RANGE EGGS
+Line 2: KINDERHOOK FARM
+Line 3: SELL BY: 1/20/19
+Barcode: 1128756
+
+Will generate the following tag:
+`, 20, 20); 
+
+doc.addImage(e,20,130);
+
+//doc.addPage([38.10,25.40],"l");
+
+PDFObject.embed(doc.output('datauristring'), "#preview-pane");
+//PDFObject.embed(doc.output('datauristring'), "#preview-pane2");
+//document.getElementById("preview-pane2").src = doc.output('datauristring');
+
+}
+
+
+function createLabel() { 
+        /////////////////////////////////////////////////////////////
+        var canvas = document.createElement("canvas");
+        //var text = "52114013378"
+        var text = "1128756"
+        //var text = "112204"
+        //height:25, width:5
+        //height:25, width:1.5
+        //if i set the barcode to margin 0, it fucks up with the image processing with jspdf UGH.
+        JsBarcode(canvas, text, {format: "CODE128", height:20, width: 1.5, fontSize:15, margin: 0});
+        x = canvas.toDataURL("image/jpeg", 1.0);
+
+        //window.open(x)
+        
+        var imgData = x;
+
+//var doc = new jsPDF('p', 'in', [5,2]);
+var doc = new jsPDF({
+    orientation: "landscape",
+    unit: "mm",
+    format: [38.10,25.40]
+});
+
+
+margins = {
+    bottom: 5,
+    top: 5,
+    left: 2,
+    right: 2
+}
+
+z = document.genLabel.line3.value;
+
+doc.setFontSize(10);
+//doc.text("hello world.",0,0,0);
+//doc.text("line 1", 2,4);
+doc.setFont("helvetica");
+doc.setFontSize(9);
+doc.text("FREE RANGE EGGS", 1, 4)
+doc.text("KINDERHOOK FARM", 1, 8)
+doc.text("SELL BY: 1/20/19", 1, 12)
+//doc.text(z, 1, 12)
+//doc.addImage(imgData, 0.5,10, 36.5, 16); //jsbarcode margin 10 (default)
+//console.log(imgData);
+doc.addImage(imgData, "JPEG", 3.5,14, 30, 9)
+//doc.addImage(imgData, "JPEG", 3.5,14)
+//doc.output('datauri');
+PDFObject.embed(doc.output('datauristring'), "#preview-pane");
+//document.getElementById("preview-pane2").src = doc.output('datauristring');
+//doc.output('datauriinnewwindow');
+//window.open(doc.output('datauri'), '_blank')
+//doc.output('dataurlnewwindow'); //works
+
+}
+
+//createLabel(); //eh...
+instructionPage();
+
+$( "#createlabel" ).click(function() {
+  //alert( "Handler for .click() called." );
+  createLabel();
+});
+        </script>
+
+	</body>
+</html>

@@ -1,0 +1,149 @@
+{
+   "revision" : "20180501",
+   "items":[
+      {
+         "name":"Ploughgate Salted Butter (Red Label)",
+         "line1":"PLOUGHGATE CREAMERY SALTED BUTTER",
+         "line1Enable":true,
+         "line2":"$99.99",
+         "line2Enable":false,
+         "line3":"SELL BY:",
+         "line3Enable":true,
+         "lineBarcode":"1104325",
+         "lineBarcodeEnable":true
+      },
+      {
+         "name":"Ploughgate Unsalted Butter (Yellow Label)",
+         "line1":"PLOUGHGATE UNSALTED BUTTER 8OZ",
+         "line1Enable":true,
+         "line2":"$99.99",
+         "line2Enable":false,
+         "line3":"SELL BY:",
+         "line3Enable":true,
+         "lineBarcode":"1109285",
+         "lineBarcodeEnable":true
+      },
+      {
+         "name":"Farmstead Buttermilk Qt (White bottle Red top)",
+         "line1":"FARMSTEAD BUTTERMILK QT",
+         "line1Enable":true,
+         "line2":"$99.99",
+         "line2Enable":false,
+         "line3":"SELL BY:",
+         "line3Enable":false,
+         "lineBarcode":"1104324",
+         "lineBarcodeEnable":true
+      },
+      {
+	"name":"Delitia Buffalo Milk Butter (Julian Calandar Datecode, set 1yr Expiration)",
+	"line1":"DELITIA",
+	"line1Enable":true,
+	"line2":"BUFFALO MILK BUTTER 8 OZ",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":true,
+	"lineBarcode":"800921",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"Madaio Strawberry Buffalo Yogurt (Red Label)",
+	"line1":"C. MADAIO",
+	"line1Enable":true,
+	"line2":"STRAWBERRY BUFFALO YOGURT",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":false,
+	"lineBarcode":"519411",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"Madaio Buffalo Yogurt (Blue Label)",
+	"line1":"C. MADAIO",
+	"line1Enable":true,
+	"line2":"BUFFALO YOGURT",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":false,
+	"lineBarcode":"513228",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"Madaio Lemon Yogurt (Green Label)",
+	"line1":"C. MADAIO",
+	"line1Enable":true,
+	"line2":"LEMON BUFFALO YOGURT",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":false,
+	"lineBarcode":"1110696",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"Urbani White Truffle Butter (Gold Label)",
+	"line1":"URBANI",
+	"line1Enable":true,
+	"line2":"WHITE TRUFFLE BUTTER",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":true,
+	"lineBarcode":"507609",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"Urbani Black Truffle Butter (Black Label)",
+	"line1":"URBANI",
+	"line1Enable":true,
+	"line2":"BLACK TRUFFLE BUTTER",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":true,
+	"lineBarcode":"507611",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"Kinderhook Eggs",
+	"line1":"KINDERHOOK FARM",
+	"line1Enable":true,
+	"line2":"EGGS, FREE RANGE",
+	"line2Enable":true,
+	"line3":"SELL BY: ",
+	"line3Enable":true,
+	"lineBarcode":"1128756",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"Moser Buure Weichkalsi (Cheese)",
+	"line1":"MOSER",
+	"line1Enable":true,
+	"line2":"BUURE WEICHKALSI",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":true,
+	"lineBarcode":"1122790",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"Moser Mini Truffle (Cheese)",
+	"line1":"MOSER",
+	"line1Enable":true,
+	"line2":"MINI TRUFFLE",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":true,
+	"lineBarcode":"1123148",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"Moser Mini Mostrado (Cheese)",
+	"line1":"MOSER",
+	"line1Enable":true,
+	"line2":"MINI MOSTRADO",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":true,
+	"lineBarcode":"1123150",
+	"lineBarcodeEnable":true
+      }
+
+   ]
+}
